@@ -1,4 +1,7 @@
-## Two options
+##Scripts
+
+
+# Automate-screen-conf.sh
 
 You can execute this command everytime you need it
 
