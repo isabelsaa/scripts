@@ -16,12 +16,12 @@ if [ -z "$DIR_TO_BACKUP" ]; then
 fi
 
 if [ ! -d "$DIR_TO_BACKUP" ]; then
-    echo "$1 is not a directory"
+    echo "Error: $1 is not a valid directory"
     exit 1
 fi
 
 mkdir -p "$BACKUP_DESTINATION"
 tar -czf "$BACKUP_DESTINATION/$BACKUP_NAME" -C "$(dirname "$DIR_TO_BACKUP")" "$(basename "$DIR_TO_BACKUP")"
 echo
-echo "Backup created:$BACKUP_DESTINATION/$BACKUP_NAME"
+echo "Backup created: $BACKUP_DESTINATION/$BACKUP_NAME"
 du -h "$BACKUP_DESTINATION/$BACKUP_NAME"
